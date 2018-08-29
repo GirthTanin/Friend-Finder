@@ -1,5 +1,5 @@
 // my list of real friends
-exports.data = [
+var realFriendsArray = [
     {
       name: "Wendy",
     //   Need a photo of Wendy
@@ -114,4 +114,6 @@ exports.data = [
         5
       ]
     }
-  ];
+  ]
+  
+  module.exports = realFriendsArray;
