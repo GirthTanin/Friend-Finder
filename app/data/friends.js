@@ -1,9 +1,8 @@
 // my list of real friends
-var realFriendsArray = [
+var friends = [
     {
       name: "Wendy",
-    //   Need a photo of Wendy
-    //   photo: "https://0",
+      photo: "./public/images/Wendy(2).jpg",
       scores: [
         2,
         2,
@@ -19,8 +18,7 @@ var realFriendsArray = [
     },
     {
       name: "Nathan",
-    //   need a photo of Nathan
-    //   photo: "https://",
+      photo: "./public/images/Nathan.jpg",
       scores: [
         4,
         5,
@@ -36,7 +34,7 @@ var realFriendsArray = [
     },
     {
       name: "Samson",
-    //   photo: "https://",
+      photo: "./public/images/Samson.jpg",
       scores: [
         2,
         4,
@@ -52,7 +50,7 @@ var realFriendsArray = [
     },
     {
       name: "Sophia",
-    //   photo: "https://",
+      photo: "./public/imgages/Sophia.jpg",
       scores: [
         4,
         3,
@@ -68,7 +66,7 @@ var realFriendsArray = [
     },
     {
       name: "Calvin",
-    //   photo: "",
+      photo: "./public/images/Calvin.jpg",
       scores: [
         3,
         3,
@@ -84,7 +82,7 @@ var realFriendsArray = [
     },
     {
       name: "Cliona",
-    //   photo: "https://jpg",
+      photo: "./public/images/Cliona.jpg",
       scores: [
         3,
         5,
@@ -100,7 +98,7 @@ var realFriendsArray = [
     },
     {
       name: "yellow function",
-    //   photo: "",
+      photo: "./public/images/Nathan-Ulysses-Thadeus-Squirrel.jpg",
       scores: [
         5,
         5,
@@ -116,4 +114,4 @@ var realFriendsArray = [
     }
   ]
   
-  module.exports = realFriendsArray;
+  module.exports = friends;
