@@ -8,7 +8,7 @@ app.use(bodyParser.urlencoded({ extended:true }));
 app.use(bodyParser.json());
 
 
-module.realFriendsArray = function(app) {
+module.exports = function(app) {
     // this is the get route from express
     app.get("api/friends", function (request, response) {
         response.json(newBestFriends);
