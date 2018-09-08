@@ -168,7 +168,7 @@
     <hr>
     <footer class="footer">
       <div class="container">
-        <p><a href="../data/friends.js">API Friends List</a> | <a href="https://github.com/GirthTanin/Friend-Finder">GitHub Repo</a></p>
+        <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/GirthTanin/Friend-Finder">GitHub Repo</a></p>
       </div>
     </footer>
 
@@ -186,7 +186,7 @@
         </div>
         <div class="modal-body">
           <h2 id="match-name"></h2>
-          <img id="match-img" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg" alt="">
+          <img id="match-img" src="" alt="squirrel">
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -259,6 +259,7 @@
             $("#q10").val()
           ]
         };
+        console.log(userData);
 
         // AJAX post the data to the friends API.
         $.post("/api/friends", userData, function(data) {

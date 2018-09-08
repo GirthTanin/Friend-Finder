@@ -2,7 +2,7 @@
 var friends = [
     {
       name: "Wendy",
-      photo: "./public/images/Wendy(2).jpg",
+      photo: "../public/Wendy(2).jpg",
       scores: [
         2,
         2,
@@ -18,7 +18,7 @@ var friends = [
     },
     {
       name: "Nathan",
-      photo: "./public/images/Nathan.jpg",
+      photo: "../public/Nathan.jpg",
       scores: [
         4,
         5,
@@ -34,7 +34,7 @@ var friends = [
     },
     {
       name: "Samson",
-      photo: "./public/images/Samson.jpg",
+      photo: "../public/Samson.jpg",
       scores: [
         2,
         4,
@@ -50,7 +50,7 @@ var friends = [
     },
     {
       name: "Sophia",
-      photo: "./public/imgages/Sophia.jpg",
+      photo: "../public/Sophia.jpg",
       scores: [
         4,
         3,
@@ -66,7 +66,7 @@ var friends = [
     },
     {
       name: "Calvin",
-      photo: "./public/images/Calvin.jpg",
+      photo: "../public/Calvin.jpg",
       scores: [
         3,
         3,
@@ -82,7 +82,7 @@ var friends = [
     },
     {
       name: "Cliona",
-      photo: "./public/images/Cliona.jpg",
+      photo: "../public/Cliona.jpg",
       scores: [
         3,
         5,
@@ -98,7 +98,7 @@ var friends = [
     },
     {
       name: "yellow function",
-      photo: "./public/images/Nathan-Ulysses-Thadeus-Squirrel.jpg",
+      photo: "../public/Nathan-Ulysses-Thadeus-Squirrel.jpg",
       scores: [
         5,
         5,
