@@ -37,6 +37,6 @@ module.exports = function(app) {
         var newFriendPhoto = friendsArray[bestMatch].photo;
         response.json(newFriend, newFriendPhoto);
 
-        friendsArray.push(req, body);
+        friendsArray.push(request, response);
     });
 };
