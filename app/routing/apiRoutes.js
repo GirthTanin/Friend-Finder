@@ -14,7 +14,7 @@ module.exports = function(app) {
         response.json(friendsArray);
     });
 
-    // this is thet post route from express
+    // this is the post route from express
     app.post("/api/friends", function(request, response) {
         var newUserTally = request.body.scores;
         var tallyArray = [];
@@ -27,14 +27,18 @@ module.exports = function(app) {
                 scoresDifference += (Math.abs(parseInt(friendsArray[i].scores[l]) - parseInt(newUserTally[l])));
             }
             tallyArray.push(scoresDifference);
+            console.log(scoresDifference);
         } 
         for(var m = 0; m<tallyArray.length; m++) {
             if (tallyArray[m] <= tallyArray[bestMatch]) {
                 bestMatch = m;
+                console.log(bestMatch);
             }
         }
         var newFriend = friendsArray[bestMatch];
+        console.log(newFriend);
         var newFriendPhoto = friendsArray[bestMatch].photo;
+        // I can't get this next line to work, and I don't remember why I wrote it this way...
         response.json(newFriend, newFriendPhoto);
 
         friendsArray.push(request, response);
