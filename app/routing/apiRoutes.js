@@ -37,10 +37,11 @@ module.exports = function(app) {
         }
         var newFriend = friendsArray[bestMatch];
         console.log(newFriend);
-        var newFriendPhoto = friendsArray[bestMatch].photo;
-        // I can't get this next line to work, and I don't remember why I wrote it this way...
-        response.json(newFriend, newFriendPhoto);
+        // var newFriendPhoto = friendsArray[bestMatch].photo;
+        // this is sending the match back to the user to be populated in the modal box, and .json only allows for ONE argument, not two.
+        response.json(newFriend);
 
-        friendsArray.push(request, response);
+        // this is sending the newest person into the friendsArray
+        friendsArray.push(request.body);
     });
 };

@@ -1,9 +1,12 @@
 
 // my list of real friends
+
+// the browser can't pull images from the public photo...
 var friends = [
     {
         name: "Wendy",
-        photo: "./public/images/Wendy(2).jpg",
+        // photo: "./public/images/Wendy(2).jpg",
+        photo: "https://m.media-amazon.com/images/M/MV5BMjM0OTIyMzY1M15BMl5BanBnXkFtZTgwMTg0OTE0NzE@._V1_SY1000_CR0,0,650,1000_AL_.jpg",
         scores: [
             2,
             2,
@@ -19,7 +22,8 @@ var friends = [
     },
     {
         name: "Nathan",
-        photo: "./public/images/Nathan.jpg",
+        // photo: "./public/images/Nathan.jpg",
+        photo: "https://m.media-amazon.com/images/M/MV5BMjM0OTIyMzY1M15BMl5BanBnXkFtZTgwMTg0OTE0NzE@._V1_SY1000_CR0,0,650,1000_AL_.jpg",
         scores: [
             4,
             5,
@@ -35,7 +39,8 @@ var friends = [
     },
     {
         name: "Samson",
-        photo: "./public/images/Samson.jpg",
+        // photo: "./public/images/Samson.jpg",
+        photo: "https://m.media-amazon.com/images/M/MV5BMjM0OTIyMzY1M15BMl5BanBnXkFtZTgwMTg0OTE0NzE@._V1_SY1000_CR0,0,650,1000_AL_.jpg",
         scores: [
             2,
             4,
@@ -51,7 +56,8 @@ var friends = [
     },
     {
         name: "Sophia",
-        photo: "./public/imgages/Sophia.jpg",
+        // photo: "./public/imgages/Sophia.jpg",
+        photo: "https://m.media-amazon.com/images/M/MV5BMjM0OTIyMzY1M15BMl5BanBnXkFtZTgwMTg0OTE0NzE@._V1_SY1000_CR0,0,650,1000_AL_.jpg",
         scores: [
             4,
             3,
@@ -67,7 +73,8 @@ var friends = [
     },
     {
         name: "Calvin",
-        photo: "./public/images/Calvin.jpg",
+        // photo: "./public/images/Calvin.jpg",
+        photo: "https://m.media-amazon.com/images/M/MV5BMjM0OTIyMzY1M15BMl5BanBnXkFtZTgwMTg0OTE0NzE@._V1_SY1000_CR0,0,650,1000_AL_.jpg",
         scores: [
             3,
             3,
@@ -83,7 +90,8 @@ var friends = [
     },
     {
         name: "Cliona",
-        photo: "./public/images/Cliona.jpg",
+        // photo: "./public/images/Cliona.jpg",
+        photo: "https://m.media-amazon.com/images/M/MV5BMjM0OTIyMzY1M15BMl5BanBnXkFtZTgwMTg0OTE0NzE@._V1_SY1000_CR0,0,650,1000_AL_.jpg",
         scores: [
             3,
             5,
@@ -99,7 +107,8 @@ var friends = [
     },
     {
         name: "yellow function",
-        photo: "./public/images/Nathan-Ulysses-Thadeus-Squirrel.jpg",
+        // photo: "./public/images/Nathan-Ulysses-Thadeus-Squirrel.jpg",
+        photo: "https://m.media-amazon.com/images/M/MV5BMjM0OTIyMzY1M15BMl5BanBnXkFtZTgwMTg0OTE0NzE@._V1_SY1000_CR0,0,650,1000_AL_.jpg",
         scores: [
             5,
             5,
