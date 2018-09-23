@@ -17,31 +17,33 @@ module.exports = function(app) {
     // this is the post route from express
     app.post("/api/friends", function(request, response) {
         var newUserTally = request.body.scores;
-        var tallyArray = [];
-        var bestMatch = 0;
+        console.log("newUserTally: " + newUserTally);
+        var bestMatch = 100;
+        var scoresDifference = 0;
+        var newFriend = {
+            name: "",
+            photo: ""
+        };
         
         for (var i = 0; i<friendsArray.length; i++) {
-            var scoresDifference = 0;
-
+            console.log(friendsArray[i].name);
+            console.log(friendsArray[i].scores);
+            scoresDifference = 0;
+ 
             for (var l = 0; l<newUserTally; l++) {
-                scoresDifference += (Math.abs(parseInt(friendsArray[i].scores[l]) - parseInt(newUserTally[l])));
+                scoresDifference += (Math.abs(parseInt(newUserTally.scores[l]) - parseInt(friendsArray[i].scores[l])));
             }
-            tallyArray.push(scoresDifference);
-            console.log(scoresDifference);
+            if (scoresDifference < bestMatch) {
+                bestMatch = scoresDifference;
+                newFriend= friendsArray[i];
+                console.log ("newFriend Name: " + newFriend.name);
+            }
         } 
-        for(var m = 0; m<tallyArray.length; m++) {
-            if (tallyArray[m] <= tallyArray[bestMatch]) {
-                bestMatch = m;
-                console.log(bestMatch);
-            }
-        }
-        var newFriend = friendsArray[bestMatch];
-        console.log(newFriend);
-        // var newFriendPhoto = friendsArray[bestMatch].photo;
-        // this is sending the match back to the user to be populated in the modal box, and .json only allows for ONE argument, not two.
-        response.json(newFriend);
-
         // this is sending the newest person into the friendsArray
         friendsArray.push(request.body);
+
+    
+        // this is sending the match back to the user to be populated in the modal box, and .json only allows for ONE argument, not two.
+        response.json(friendsArray);
     });
 };
