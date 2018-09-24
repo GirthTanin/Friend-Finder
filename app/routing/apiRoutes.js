@@ -31,19 +31,27 @@ module.exports = function(app) {
             scoresDifference = 0;
  
             for (var l = 0; l<newUserTally; l++) {
-                scoresDifference += (Math.abs(parseInt(newUserTally.scores[l]) - parseInt(friendsArray[i].scores[l])));
+                scoresDifference += 
+                (Math.abs(parseInt(newUserTally.scores[l]) - parseInt(friendsArray[i].scores[l])));
+
+                // (Math.abs(parseInt(friendsArray[i].scores[l]) - parseInt(newUserTally.scores[l])));
+
             }
             if (scoresDifference < bestMatch) {
                 bestMatch = scoresDifference;
                 newFriend= friendsArray[i];
                 console.log ("newFriend Name: " + newFriend.name);
+                console.log ("newFriend Photo: " + newFriend.photo);
             }
         } 
         // this is sending the newest person into the friendsArray
         friendsArray.push(request.body);
+        console.log("request.body" + JSON.stringify(request.body));
+        // console.log("request.body" + request.body);
 
     
         // this is sending the match back to the user to be populated in the modal box, and .json only allows for ONE argument, not two.
         response.json(friendsArray);
+        // console.log(friendsArray);
     });
 };
