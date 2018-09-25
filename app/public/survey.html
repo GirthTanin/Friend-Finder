@@ -259,7 +259,7 @@
             $("#q10").val()
           ]
         };
-        console.log(userData);
+        console.log("262 " + userData);
 
         // AJAX post the data to the friends API.
         $.ajax({
@@ -268,10 +268,15 @@
           data: userData,
           traditional: true 
         }).then(function(data) {
+          console.log("data line 271: " + (JSON.stringify(data)));
 
           // Grab the result from the AJAX post so that the best match's name and photo are displayed.
           $("#match-name").text(data.name);
+          // this next line is coming back undefined
+          console.log(JSON.stringify(data.name));
           $("#match-img").attr("src", data.photo);
+          // this next line is coming back undefined
+          console.log(JSON.stringify(data.photo));
 
           // Show the modal with the best match
           $("#results-modal").modal("toggle");

@@ -16,32 +16,34 @@ module.exports = function(app) {
 
     // this is the post route from express
     app.post("/api/friends", function(request, response) {
-        var newUserTally = request.body.scores;
+        var newUser = request.body;
+        var newUserTally = newUser.scores;
         console.log("newUserTally: " + newUserTally);
         var bestMatch = 100;
         var scoresDifference = 0;
         var newFriend = {
             name: "",
-            photo: ""
+            photo: "",
+            compatibility: 1000
         };
         
         for (var i = 0; i<friendsArray.length; i++) {
-            console.log(friendsArray[i].name);
-            console.log(friendsArray[i].scores);
+            console.log("29 " + friendsArray[i].name);
+            console.log("30 " + friendsArray[i].scores);
             scoresDifference = 0;
- 
-            for (var l = 0; l<newUserTally; l++) {
+
+            // This next loop doesn't even seem to be occuring...I can't get it to console.log anything...
+            for (var l = 0; l<friendsArray[i].scores[l]; l++) {
                 scoresDifference += 
-                (Math.abs(parseInt(newUserTally.scores[l]) - parseInt(friendsArray[i].scores[l])));
-
-                // (Math.abs(parseInt(friendsArray[i].scores[l]) - parseInt(newUserTally.scores[l])));
-
-            }
-            if (scoresDifference < bestMatch) {
-                bestMatch = scoresDifference;
-                newFriend= friendsArray[i];
-                console.log ("newFriend Name: " + newFriend.name);
-                console.log ("newFriend Photo: " + newFriend.photo);
+                (Math.abs(parseInt(newUserTally[l]) - parseInt(friendsArray[i].scores[l])));   
+            
+                if (scoresDifference <= newFriend.compatibility) {
+                    newFriend.name = friendsArray[i].name;
+                    newFriend.photo = friendsArray[i].photo;
+                    newFriend.compatibility = scoresDifference;
+                    console.log ("newFriend Name: " + newFriend.name);
+                    console.log ("newFriend Photo: " + newFriend.photo);
+                }
             }
         } 
         // this is sending the newest person into the friendsArray
@@ -51,7 +53,7 @@ module.exports = function(app) {
 
     
         // this is sending the match back to the user to be populated in the modal box, and .json only allows for ONE argument, not two.
-        response.json(friendsArray);
+        response.json(newFriend);
         // console.log(friendsArray);
     });
 };
