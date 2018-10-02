@@ -2,7 +2,8 @@
 This is my homework for week 13 of my Trilogy Boot Camp at the University of Pennsylvania.
 
 ##  Skill Sets Demonstrated
-In this challenge I used Node and Express for the server, and then deploy it in a working state to Heroku. Learning about standardized file and folder structure was also required.
+In this challenge I used Node and Express for the server, and then deploy it in a working state to Heroku. https://immense-gorge-59707.herokuapp.com/
+Meeting standardized file and folder structure was also required.
 
 ##To Fork and Play with this yourself
 You will need to run *npm install* in the command line to have the node packages that will allow this to run for you.  After you have all the files, at the server.js level use `npm start` or `node server.js` to begin the fun.  Once it is running, from your browser you can interact with it at `localhost:8080/`.
